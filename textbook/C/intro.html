@@ -579,36 +579,9 @@ the general structure of our program should be the same.  After all, all of thes
 <p>As a matter of fact, using our knowledge of UNIX and assembly we can validate this fact for ourselves.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<pre style="border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white">
-$ type -p python/opt/conda/bin/python
-</pre><pre style="border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white">
-$ ls -l $(type -p python)lrwxrwxrwx. 1 nayvoj users 9 Feb  6 13:30 /opt/conda/bin/python -> python3.9
-</pre><pre style="border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white">
-$ ls -l $(type -p python3.9)-rwxrwxr-x. 1 nayvoj users 24543952 Feb  6 13:30 /opt/conda/bin/python3.9
-</pre><pre style="border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white">
-$ file $(type -p python3.9)/opt/conda/bin/python3.9: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.18, with debug_info, not stripped
-</pre><pre style="border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white">
-$ objdump -M intel -d $(type -p python3.9) | head -20
-/opt/conda/bin/python3.9:     file format elf64-x86-64
-
-
-Disassembly of section .init:
-
-000000000005c000 <_init>:
-   5c000:	48 83 ec 08          	sub    rsp,0x8
-   5c004:	e8 4b ea 1a 00       	call   20aa54 <call_gmon_start>
-   5c009:	48 83 c4 08          	add    rsp,0x8
-   5c00d:	c3                   	ret    
-
-Disassembly of section .plt:
-
-000000000005c010 <__libc_start_main@plt-0x10>:
-   5c010:	ff 35 92 84 33 00    	push   QWORD PTR [rip+0x338492]        # 3944a8 <_GLOBAL_OFFSET_TABLE_+0x8>
-   5c016:	ff 25 94 84 33 00    	jmp    QWORD PTR [rip+0x338494]        # 3944b0 <_GLOBAL_OFFSET_TABLE_+0x10>
-   5c01c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
-
-000000000005c020 <__libc_start_main@plt>:
-</pre></div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "6fc68496c767474a956bc4f67f63576c", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 <p>If we want we can even run it in the debugger</p>
 <div class="cell docutils container">
@@ -618,55 +591,9 @@ Disassembly of section .plt:
 </div>
 </div>
 <div class="cell_output docutils container">
-<pre style="border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white">
-$ echo -e 'set disassembly-flavor intel
-b _start
-run
-disass
-quit' | gdb $(type -p python)GNU gdb (GDB) 10.2
-Copyright (C) 2021 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
-Type "show copying" and "show warranty" for details.
-This GDB was configured as "x86_64-pc-linux-gnu".
-Type "show configuration" for configuration details.
-For bug reporting instructions, please see:
-<https://www.gnu.org/software/gdb/bugs/>.
-Find the GDB manual and other documentation resources online at:
-    <http://www.gnu.org/software/gdb/documentation/>.
-
-For help, type "help".
-Type "apropos word" to search for commands related to "word"...
-Reading symbols from /opt/conda/bin/python...
-(gdb) (gdb) Breakpoint 1 at 0x20aa28
-(gdb) Starting program: /opt/conda/bin/python 
-[Thread debugging using libthread_db enabled]
-Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
-
-Breakpoint 1, 0x0000563dc9323a28 in _start ()
-(gdb) Dump of assembler code for function _start:
-=> 0x0000563dc9323a28 <+0>:	xor    ebp,ebp
-   0x0000563dc9323a2a <+2>:	mov    r9,rdx
-   0x0000563dc9323a2d <+5>:	pop    rsi
-   0x0000563dc9323a2e <+6>:	mov    rdx,rsp
-   0x0000563dc9323a31 <+9>:	and    rsp,0xfffffffffffffff0
-   0x0000563dc9323a35 <+13>:	push   rax
-   0x0000563dc9323a36 <+14>:	push   rsp
-   0x0000563dc9323a37 <+15>:	lea    r8,[rip+0x91392]        # 0x563dc93b4dd0 <__libc_csu_fini>
-   0x0000563dc9323a3e <+22>:	lea    rcx,[rip+0x9139b]        # 0x563dc93b4de0 <__libc_csu_init>
-   0x0000563dc9323a45 <+29>:	lea    rdi,[rip+0xfffffffffff136d4]        # 0x563dc9237120 <main>
-   0x0000563dc9323a4c <+36>:	call   0x563dc9175020 <__libc_start_main@plt>
-   0x0000563dc9323a51 <+41>:	hlt    
-   0x0000563dc9323a52 <+42>:	nop
-   0x0000563dc9323a53 <+43>:	nop
-End of assembler dump.
-(gdb) A debugging session is active.
-
-	Inferior 1 [process 3024] will be killed.
-
-Quit anyway? (y or n) [answered Y; input not from terminal]
-</pre></div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "863bf08a29f548628895b3ef84f9e737", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 <p>From here, like the programs we wrote, we could single step it and examine how it uses the CPU, memory and the calls it makes to the OS.</p>
 <p>The Python interpreter is a native program that reads in python programs as ASCII lines of text and then interprets them according to the Python language definition.</p>
@@ -680,12 +607,9 @@ Quit anyway? (y or n) [answered Y; input not from terminal]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>$ ls -lh $(type -p python3.9)
--rwxrwxr-x. 1 nayvoj users 24M Feb  6 13:30 <span class=" -Color -Color-Bold -Color-Bold-Green">/opt/conda/bin/python3.9</span>
-$ 
-</pre></div>
-</div>
-</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "515b89fa135f48989c4daa78d978b3d0", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 <p>That’s a lot bigger than the programs we wrote in assembly code! Could you imagine writing something that big? Futher could you imagine writing a new version for every computer type and OS pair?  As a matter of fact, it is likely if we did have to do that then we would not even have languages like Python in the first place!</p>
 </div>
@@ -799,6 +723,12 @@ $
 </div>
 </div>
 </div>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"515b89fa135f48989c4daa78d978b3d0": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_6626b77ef60a473c945229ecffda995b", "msg_id": "", "outputs": [{"name": "stdout", "output_type": "stream", "text": "$ ls -lh $(type -p python3.9)\n-rwxrwxr-x. 1 nayvoj users 24M Feb  6 13:30 \u001b[0m\u001b[01;32m/opt/conda/bin/python3.9\u001b[0m\r\n$ \n"}]}}, "6626b77ef60a473c945229ecffda995b": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "6fc68496c767474a956bc4f67f63576c": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_e603a6b68d214bef9b3aad14fedc92ab", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ objdump -M intel -d $(type -p python3.9) | head -20\r\n/opt/conda/bin/python3.9:     file format elf64-x86-64\r\n\r\n\r\nDisassembly of section .init:\r\n\r\n000000000005c000 <_init>:\r\n   5c000:\t48 83 ec 08          \tsub    rsp,0x8\r\n   5c004:\te8 4b ea 1a 00       \tcall   20aa54 <call_gmon_start>\r\n   5c009:\t48 83 c4 08          \tadd    rsp,0x8\r\n   5c00d:\tc3                   \tret    \r\n\r\nDisassembly of section .plt:\r\n\r\n000000000005c010 <__libc_start_main@plt-0x10>:\r\n   5c010:\tff 35 92 84 33 00    \tpush   QWORD PTR [rip+0x338492]        # 3944a8 <_GLOBAL_OFFSET_TABLE_+0x8>\r\n   5c016:\tff 25 94 84 33 00    \tjmp    QWORD PTR [rip+0x338494]        # 3944b0 <_GLOBAL_OFFSET_TABLE_+0x10>\r\n   5c01c:\t0f 1f 40 00          \tnop    DWORD PTR [rax+0x0]\r\n\r\n000000000005c020 <__libc_start_main@plt>:\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "78374f4fb5e44b3dab3a3b4bf77d85cd": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_d775249d6c2448e085530584e7a79579", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ type -p python/opt/conda/bin/python\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "863bf08a29f548628895b3ef84f9e737": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_d580770a9c71424bb1a4b01d20819632", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ echo -e 'set disassembly-flavor intel\nb _start\nrun\ndisass\nquit' | gdb $(type -p python)GNU gdb (GDB) 10.2\r\nCopyright (C) 2021 Free Software Foundation, Inc.\r\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\r\nThis is free software: you are free to change and redistribute it.\r\nThere is NO WARRANTY, to the extent permitted by law.\r\nType \"show copying\" and \"show warranty\" for details.\r\nThis GDB was configured as \"x86_64-pc-linux-gnu\".\r\nType \"show configuration\" for configuration details.\r\nFor bug reporting instructions, please see:\r\n<https://www.gnu.org/software/gdb/bugs/>.\r\nFind the GDB manual and other documentation resources online at:\r\n    <http://www.gnu.org/software/gdb/documentation/>.\r\n\r\nFor help, type \"help\".\r\nType \"apropos word\" to search for commands related to \"word\"...\r\nReading symbols from /opt/conda/bin/python...\r\n(gdb) (gdb) Breakpoint 1 at 0x20aa28\r\n(gdb) Starting program: /opt/conda/bin/python \r\n[Thread debugging using libthread_db enabled]\r\nUsing host libthread_db library \"/lib/x86_64-linux-gnu/libthread_db.so.1\".\r\n\r\nBreakpoint 1, 0x000055d39d8faa28 in _start ()\r\n(gdb) Dump of assembler code for function _start:\r\n=> 0x000055d39d8faa28 <+0>:\txor    ebp,ebp\r\n   0x000055d39d8faa2a <+2>:\tmov    r9,rdx\r\n   0x000055d39d8faa2d <+5>:\tpop    rsi\r\n   0x000055d39d8faa2e <+6>:\tmov    rdx,rsp\r\n   0x000055d39d8faa31 <+9>:\tand    rsp,0xfffffffffffffff0\r\n   0x000055d39d8faa35 <+13>:\tpush   rax\r\n   0x000055d39d8faa36 <+14>:\tpush   rsp\r\n   0x000055d39d8faa37 <+15>:\tlea    r8,[rip+0x91392]        # 0x55d39d98bdd0 <__libc_csu_fini>\r\n   0x000055d39d8faa3e <+22>:\tlea    rcx,[rip+0x9139b]        # 0x55d39d98bde0 <__libc_csu_init>\r\n   0x000055d39d8faa45 <+29>:\tlea    rdi,[rip+0xfffffffffff136d4]        # 0x55d39d80e120 <main>\r\n   0x000055d39d8faa4c <+36>:\tcall   0x55d39d74c020 <__libc_start_main@plt>\r\n   0x000055d39d8faa51 <+41>:\thlt    \r\n   0x000055d39d8faa52 <+42>:\tnop\r\n   0x000055d39d8faa53 <+43>:\tnop\r\nEnd of assembler dump.\r\n(gdb) A debugging session is active.\r\n\r\n\tInferior 1 [process 353] will be killed.\r\n\r\nQuit anyway? (y or n) [answered Y; input not from terminal]\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "898fceae7e8446b99856ad2b60f72ec3": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "96d223a09f52460aaa3639d1829a856a": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9b35c35a20424d2d8ca8dbcba2e8b755": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a684575a843e4c1b8d201f1051fccff5": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_9b35c35a20424d2d8ca8dbcba2e8b755", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ file $(type -p python3.9)/opt/conda/bin/python3.9: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.18, with debug_info, not stripped\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "d2fda8980855453ab798308b704e6659": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_96d223a09f52460aaa3639d1829a856a", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ ls -l $(type -p python3.9)-rwxrwxr-x. 1 nayvoj users 24543952 Feb  6 13:30 /opt/conda/bin/python3.9\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "d580770a9c71424bb1a4b01d20819632": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d775249d6c2448e085530584e7a79579": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d90cf50e8dee48a2bf680101343bd7e4": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_898fceae7e8446b99856ad2b60f72ec3", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ ls -l $(type -p python)lrwxrwxrwx. 1 nayvoj users 9 Feb  6 13:30 /opt/conda/bin/python -> python3.9\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "e603a6b68d214bef9b3aad14fedc92ab": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}}, "version_major": 2, "version_minor": 0}
+</script>
+
 
     <script type="text/x-thebe-config">
     {
