@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>13. Introduction &#8212; UndertheCovers</title>
+    <title>25. Introduction &#8212; UndertheCovers</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -40,8 +40,9 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -53,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BU CS210 Overview" href="../BUCS210_intro.html" />
-    <link rel="prev" title="12. Representing information - The Basics: Bits, Bytes and Notation" href="../assembly/InfoRepI.html" />
+    <link rel="next" title="26. New Chapter" href="mychapter.html" />
+    <link rel="prev" title="24. Assembly using the OS" href="../assembly/assemblyOS.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,6 +101,18 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  How to read this book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../howto.html">
+   How to read this book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   The Unix Development Environment
  </span>
 </p>
@@ -129,6 +142,36 @@
    6. The Shell – Progammable User Interface to the computer
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unix/editors.html">
+   7. Editors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unix/processes.html">
+   8. Processes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unix/ides.html">
+   9. IDEs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unix/make.html">
+   10. Make
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unix/gitintro.html">
+   11. Intro to Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unix/git.html">
+   12. Git
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -138,32 +181,62 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../assembly/intro.html">
-   7. Introduction: Assembly Programming
+   13. Introduction: Assembly Programming
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../assembly/vonNeumannArchitecture.html">
-   8. The von Neumann Architecture
+   14. The von Neumann Architecture
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../assembly/UnixAssemblyProgramming.html">
-   9. Executables
+   15. Executables and Processes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../assembly/Debuggers.html">
-   10. Machine Debuggers &amp; Open Process Surgery
+   16. Machine Debuggers &amp; Open Process Surgery
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../assembly/assembly.html">
-   11. Lets write some assembly code
+   17. Lets write some assembly code
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../assembly/InfoRepI.html">
-   12. Representing information - The Basics: Bits, Bytes and Notation
+   18. Representing information - Preliminaries: Bits, Bytes and Notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assembly/nativetypes.html">
+   19. Information Representation - Native Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assembly/anatomyI.html">
+   20. Assembly : Program Anatomy I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assembly/anatomyII.html">
+   21. Program Anatomy II : Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assembly/anatomyIII.html">
+   22. Program Anatomy III : Code as Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assembly/anatomyIV.html">
+   23. Program Anatomy IV: The Tree of Bytes and Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assembly/assemblyOS.html">
+   24. Assembly using the OS
   </a>
  </li>
 </ul>
@@ -175,7 +248,12 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   13. Introduction
+   25. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mychapter.html">
+   26. New Chapter
   </a>
  </li>
 </ul>
@@ -236,7 +314,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -289,7 +367,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -298,110 +376,110 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#downside-the-human-burden-of-assembly-programming-and-programmer-lock-in">
-   13.1. Downside: The human burden of assembly programming and programmer lock in.
+   25.1. Downside: The human burden of assembly programming and programmer lock in.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#downside-the-code-we-write-is-locked-to-a-specific-cpu">
-   13.2. Downside: The code we write is locked to a specific CPU
+   25.2. Downside: The code we write is locked to a specific CPU
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#downside-the-code-we-write-is-locked-to-a-specific-os">
-   13.3. Downside: The code we write is locked to a specific OS
+   25.3. Downside: The code we write is locked to a specific OS
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#high-level-langauges">
-   13.4. High level Langauges
+   25.4. High level Langauges
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#but">
-     13.4.1. But …
+     25.4.1. But …
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-birth-of-c">
-   13.5. The birth of “C”
+   25.5. The birth of “C”
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#c-as-an-alternative-to-assembly-programming">
-   13.6. C as an alternative to Assembly programming
+   25.6. C as an alternative to Assembly programming
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#c-a-life-beyond-unix-os-development">
-   13.7. “C” a life beyond UNIX OS development.
+   25.7. “C” a life beyond UNIX OS development.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#our-approach-to-c">
-   13.8. Our approach to “C”
+   25.8. Our approach to “C”
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#preliminaries-the-c-compiler-our-very-onw-personal-assembly-programmer">
-   13.9. Preliminaries:  The C Compiler : Our very onw personal assembly programmer
+   25.9. Preliminaries:  The C Compiler : Our very onw personal assembly programmer
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-toolchain">
-     13.9.1. The ToolChain
+     25.9.1. The ToolChain
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cc1-as-ld">
-   13.10. cc1, as, ld
+   25.10. cc1, as, ld
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#compiler-driver-gcc-cc">
-     13.10.1. Compiler driver: gcc/cc
+     25.10.1. Compiler driver: gcc/cc
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#controlling-directing-the-compiler">
-   13.11. Controlling / Directing the compiler
+   25.11. Controlling / Directing the compiler
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#options">
-     13.11.1. Options
+     25.11.1. Options
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#optimization-options">
-       13.11.1.1. Optimization options
+       25.11.1.1. Optimization options
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#language-options">
-       13.11.1.2. Language options
+       25.11.1.2. Language options
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#debugger-options">
-       13.11.1.3. Debugger options
+       25.11.1.3. Debugger options
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#machine-specific-options">
-       13.11.1.4. Machine Specific options
+       25.11.1.4. Machine Specific options
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#our-focus">
-     13.11.2. Our focus
+     25.11.2. Our focus
     </a>
    </li>
   </ul>
@@ -414,135 +492,7 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#downside-the-human-burden-of-assembly-programming-and-programmer-lock-in">
-   13.1. Downside: The human burden of assembly programming and programmer lock in.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#downside-the-code-we-write-is-locked-to-a-specific-cpu">
-   13.2. Downside: The code we write is locked to a specific CPU
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#downside-the-code-we-write-is-locked-to-a-specific-os">
-   13.3. Downside: The code we write is locked to a specific OS
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#high-level-langauges">
-   13.4. High level Langauges
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#but">
-     13.4.1. But …
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-birth-of-c">
-   13.5. The birth of “C”
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#c-as-an-alternative-to-assembly-programming">
-   13.6. C as an alternative to Assembly programming
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#c-a-life-beyond-unix-os-development">
-   13.7. “C” a life beyond UNIX OS development.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#our-approach-to-c">
-   13.8. Our approach to “C”
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preliminaries-the-c-compiler-our-very-onw-personal-assembly-programmer">
-   13.9. Preliminaries:  The C Compiler : Our very onw personal assembly programmer
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-toolchain">
-     13.9.1. The ToolChain
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cc1-as-ld">
-   13.10. cc1, as, ld
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#compiler-driver-gcc-cc">
-     13.10.1. Compiler driver: gcc/cc
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#controlling-directing-the-compiler">
-   13.11. Controlling / Directing the compiler
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#options">
-     13.11.1. Options
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#optimization-options">
-       13.11.1.1. Optimization options
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#language-options">
-       13.11.1.2. Language options
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#debugger-options">
-       13.11.1.3. Debugger options
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#machine-specific-options">
-       13.11.1.4. Machine Specific options
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#our-focus">
-     13.11.2. Our focus
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
   <div class="cell docutils container">
@@ -554,33 +504,33 @@
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
-<h1><span class="section-number">13. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">25. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>So now that we have a sense for how programs work and we know how to write assembly code, that is very close to the native language of the computer, let us try and figure out how to ensure that most humans never have to do that!</p>
 <p>Understanding how the relationship between the cpu and the values in memory give us the ability to construct computer programs is very powerful.  However, there are many disadvantages to trying to write and develop all our software with tools that only provide a raw binary view of programming.  In particular, the assembler and linker are very powerful but they require us to write a lot of carefully constructed code and to know a lot about the specific cpu and operating system that we what our program to run on.</p>
 <div class="section" id="downside-the-human-burden-of-assembly-programming-and-programmer-lock-in">
-<h2><span class="section-number">13.1. </span>Downside: The human burden of assembly programming and programmer lock in.<a class="headerlink" href="#downside-the-human-burden-of-assembly-programming-and-programmer-lock-in" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.1. </span>Downside: The human burden of assembly programming and programmer lock in.<a class="headerlink" href="#downside-the-human-burden-of-assembly-programming-and-programmer-lock-in" title="Permalink to this headline">¶</a></h2>
 <p>Consider how when writing assembly code we can demark any area of memory with a symbolic label and place any byte values we want in that area memory.  While this give us a great deal of freedom and power it also means that we have to make lots of decisions and write lots of carefully constructed assembly just to write a function or layout a data stucture.   For example we are responsible for knowing that one label represents the start of a function while another represents an else condition of an if construct.  Or that another label demarks a single byte that we want to use as a byte sized unsigned integer followed by an area of memory that we want to use as an eight byte signed integer.   Think of all the trouble we might create if we accidentally get confused and use our areas of memory inconsistently in different parts of our program.  For example we accidentally treat the label of the else clause as function by calling it or we directly jump to the function label instead of calling it.  Or perhaps we move a four byte value to the area that we intended to use as a single byte unsigned integer followed an eight byte signed value.  This would likely “corrupt” both the single byte value and the 8 byte value all in one fell swoop.  We could spend days and days trying to figure out why our program seems to do strange things once in a while.  Or worse we never realize it and our code simply one day causes an airplane to crash.</p>
 <p>If focsed all ones effort in learning all the nuances of the assembly language of a particular CPU then you have locked yourself into what CPU’s and OS’s you can be productive in.</p>
 </div>
 <div class="section" id="downside-the-code-we-write-is-locked-to-a-specific-cpu">
-<h2><span class="section-number">13.2. </span>Downside: The code we write is locked to a specific CPU<a class="headerlink" href="#downside-the-code-we-write-is-locked-to-a-specific-cpu" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.2. </span>Downside: The code we write is locked to a specific CPU<a class="headerlink" href="#downside-the-code-we-write-is-locked-to-a-specific-cpu" title="Permalink to this headline">¶</a></h2>
 <p>Futher when we write assembly code we end up with a program that can only work on a computer that has a cpu that is compatible with the instruction set we wrote our code in.  For example we might write a program to sort numbers in 6502 assembly language.  Unsurprisingly the executable we create cannot be executed on a computer with an Intel X86 processor or one with an ARM AArch64 processor.  But worse the source code, the ascii ‘.S’ files,  of our program cannot be assembled using and X86 or ARM assembler to produce a binary for systems using those processors.  After all the code we wrote specifically identifies 6502 instructions which translate direclty into binary opcodes for the 6502.  The other processor likely don’t have these particular instructions and even if they did they need not translate to the apprropriate opcodes.  However, it is obvious that
 not only should it be possible to write a program to sort numbers on all of these computers
 the general structure of our program should be the same.  After all, all of these computers are von Neumann computers where they implement a basic processing loop and their instructions and data are represented by bytes in memory.  It would be really nice if we could write our code in a common assembly language and the assemblers for each processor could convert.  Of course this unfortunately might also mean that we could not use instructions that don’t easly have a counter part on each processor.  For example it is easy to see that all of the systems will have instructions for moving values to and from memory to either specific registers and have instructions for conducting addition.  However it is unlikely that they all would have an equivalent of the X86 <code class="docutils literal notranslate"><span class="pre">popcnt</span></code> instruction that calculates the number of one bits in a 64 bit vector and stores the result to a memory location.   So we would need to restrict our genric assembly language to avoid the use of such instructions and of course loose the power of their use.</p>
 </div>
 <div class="section" id="downside-the-code-we-write-is-locked-to-a-specific-os">
-<h2><span class="section-number">13.3. </span>Downside: The code we write is locked to a specific OS<a class="headerlink" href="#downside-the-code-we-write-is-locked-to-a-specific-os" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.3. </span>Downside: The code we write is locked to a specific OS<a class="headerlink" href="#downside-the-code-we-write-is-locked-to-a-specific-os" title="Permalink to this headline">¶</a></h2>
 <p>Lastly consider what we had to do in an assembly program to use facilities of the operating system.  We had to explictly know what functions the specific operating system has, what they do, what argument they require, what registers to use to pass the arguments, what they calls return, the cpu specific instructions for call the operating system functions.  Knowing all this we then had to write the CPU specific assembly.  As such our program became speific to both the CPU and OS.  However, again it seems reasonable that most Operating systems will support ways for connecting to a webserver on the internet and sending and receiving bytes from it.  It would be really nice to write code that can run or at least be translated by a tool to run on the particular OS we are using.</p>
 </div>
 <div class="section" id="high-level-langauges">
-<h2><span class="section-number">13.4. </span>High level Langauges<a class="headerlink" href="#high-level-langauges" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.4. </span>High level Langauges<a class="headerlink" href="#high-level-langauges" title="Permalink to this headline">¶</a></h2>
 <p>Now many of us likely have written programs in languages like Python, Java, etc. and have never had any of the issues assocaited with writing assembly code.    So how is this possible if in the end the hardware only can execute instructions and interpret data that are represented as bytes in memory?</p>
 <p>These languages do not run natively.  Rather the languages are implememented by software that “translate” or interpret programs written in the language they support.  For example in order to run a Python program you must run an Python executable, A Python Interpreter, that then process your python program.  There is nothing particularly special about the Python Interpreter executable.  It is a binary has been built to execute on your OS and cpu. Just like the executables we built in the prior portion of this book.</p>
 <p>As a matter of fact, using our knowledge of UNIX and assembly we can validate this fact for ourselves.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "6fc68496c767474a956bc4f67f63576c", "version_major": 2, "version_minor": 0}
+{"model_id": "89ef1bdcc4214484992d1b2942af621e", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
 <p>If we want we can even run it in the debugger</p>
@@ -592,13 +542,13 @@ the general structure of our program should be the same.  After all, all of thes
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "863bf08a29f548628895b3ef84f9e737", "version_major": 2, "version_minor": 0}
+{"model_id": "738c88c1e8a64ba8955a2ab01796e22d", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
 <p>From here, like the programs we wrote, we could single step it and examine how it uses the CPU, memory and the calls it makes to the OS.</p>
 <p>The Python interpreter is a native program that reads in python programs as ASCII lines of text and then interprets them according to the Python language definition.</p>
 <div class="section" id="but">
-<h3><span class="section-number">13.4.1. </span>But …<a class="headerlink" href="#but" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">25.4.1. </span>But …<a class="headerlink" href="#but" title="Permalink to this headline">¶</a></h3>
 <p>Take a look again at how big the python binary is</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -608,14 +558,14 @@ the general structure of our program should be the same.  After all, all of thes
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "515b89fa135f48989c4daa78d978b3d0", "version_major": 2, "version_minor": 0}
+{"model_id": "482f33fb0e9d4ce6872a62be329ba425", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
 <p>That’s a lot bigger than the programs we wrote in assembly code! Could you imagine writing something that big? Futher could you imagine writing a new version for every computer type and OS pair?  As a matter of fact, it is likely if we did have to do that then we would not even have languages like Python in the first place!</p>
 </div>
 </div>
 <div class="section" id="the-birth-of-c">
-<h2><span class="section-number">13.5. </span>The birth of “C”<a class="headerlink" href="#the-birth-of-c" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.5. </span>The birth of “C”<a class="headerlink" href="#the-birth-of-c" title="Permalink to this headline">¶</a></h2>
 <p>Well as a matter of fact this is precisely the kind of problem that the early inventors of the UNIX operating system were facing. The UNIX kernel is also a very complex program that one would like to have operate on many different types of computers.  For the most part operating system kernels had been largely written in Assembly language for the particular computer the OS was going to run on.  Further to support a new computer the OS had to be carefully rewritten for the new computer’s CPU features, memory organization and devices.  Borrowing from the idea of using high-level languages to implement applications the developers of UNIX choose to evolve the UNIX kernel in a way that would allow much of the system to be portable.  That is to say the work to be done to get the system running on a new computer would not require writing new assembly code for all but a small part of the code.   However, the nature of operating systems code is that it needs to often  manipulate the CPU and memory directly and easily inter-operates with assembly code.  This is in contrast to the high-level languages that were being developed for applications. Those languages largely went out of their way to hide as much of the machine details as possible from the programmer and restrict what could be done in the language. Doing so avoids the need to understand the details of how data and code is represented as binary values in memory and to keep programmers from making various kinds of errors.</p>
 <p>What was needed was a programming language that was in-between assembly language and the high-level languages.  Where the new language would not hide the nature of memory from the programmer nor excessively restrict what can be done while still helping to avoid common pitfalls of assembly programming.  Rather the language should precisely let the programmer work with memory but in a way that is more generic and portable than writing code for a particular CPU assembly language.</p>
 <p>So the approach taken with the UNIX operating system was to develop a program, that we call a compiler, that could translate source code in this generic machine oriented language to assembly code for the particular computer that was being targeted.   The assembly code the compiler produced can then be treated as input in the the systems assembler and linker.   If much of the OS could be written in this generic language then getting the OS to run on a new computer really meant writing a new compiler for the system and then “re-compile” the OS source with it.  In addition to portability the language would help a programmer  avoid common errors and the need to know the details of every CPU.  I</p>
@@ -625,16 +575,16 @@ the general structure of our program should be the same.  After all, all of thes
 </div></blockquote>
 </div>
 <div class="section" id="c-as-an-alternative-to-assembly-programming">
-<h2><span class="section-number">13.6. </span>C as an alternative to Assembly programming<a class="headerlink" href="#c-as-an-alternative-to-assembly-programming" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.6. </span>C as an alternative to Assembly programming<a class="headerlink" href="#c-as-an-alternative-to-assembly-programming" title="Permalink to this headline">¶</a></h2>
 <p>So how do we maintain the power of assembly programming while also avoiding the downsides?</p>
 <p>Almost by definition we must make some trade-offs</p>
 </div>
 <div class="section" id="c-a-life-beyond-unix-os-development">
-<h2><span class="section-number">13.7. </span>“C” a life beyond UNIX OS development.<a class="headerlink" href="#c-a-life-beyond-unix-os-development" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.7. </span>“C” a life beyond UNIX OS development.<a class="headerlink" href="#c-a-life-beyond-unix-os-development" title="Permalink to this headline">¶</a></h2>
 <p>This language proved to be so useful its ability to enable expert programmers to write new tools that many of the programs that traditionaly had to be written in assembly language like the high-level application language translators and interpreters were rewritten to C.</p>
 </div>
 <div class="section" id="our-approach-to-c">
-<h2><span class="section-number">13.8. </span>Our approach to “C”<a class="headerlink" href="#our-approach-to-c" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.8. </span>Our approach to “C”<a class="headerlink" href="#our-approach-to-c" title="Permalink to this headline">¶</a></h2>
 <p>We will take an unconventional approach to exploring and learning the “C” programming lanaguge.  Rather than just considering it as a programming language and its attendant syntax we will develop our understanding as we explore how it b</p>
 <p>Constructing C from the ground up:</p>
 <ul class="simple">
@@ -689,36 +639,36 @@ the general structure of our program should be the same.  After all, all of thes
 <p>Compilers also can codify best practices for a particular machine and OS.  After all it has to translate the ‘C’ code into machine and OS specific assembly code.  For the most part however, OS specific differences are handled by use of libraries written to support common functions that are implemented for each OS that is supported.</p>
 </div>
 <div class="section" id="preliminaries-the-c-compiler-our-very-onw-personal-assembly-programmer">
-<h2><span class="section-number">13.9. </span>Preliminaries:  The C Compiler : Our very onw personal assembly programmer<a class="headerlink" href="#preliminaries-the-c-compiler-our-very-onw-personal-assembly-programmer" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.9. </span>Preliminaries:  The C Compiler : Our very onw personal assembly programmer<a class="headerlink" href="#preliminaries-the-c-compiler-our-very-onw-personal-assembly-programmer" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="the-toolchain">
-<h3><span class="section-number">13.9.1. </span>The ToolChain<a class="headerlink" href="#the-toolchain" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">25.9.1. </span>The ToolChain<a class="headerlink" href="#the-toolchain" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="cc1-as-ld">
-<h2><span class="section-number">13.10. </span>cc1, as, ld<a class="headerlink" href="#cc1-as-ld" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.10. </span>cc1, as, ld<a class="headerlink" href="#cc1-as-ld" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="compiler-driver-gcc-cc">
-<h3><span class="section-number">13.10.1. </span>Compiler driver: gcc/cc<a class="headerlink" href="#compiler-driver-gcc-cc" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">25.10.1. </span>Compiler driver: gcc/cc<a class="headerlink" href="#compiler-driver-gcc-cc" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="controlling-directing-the-compiler">
-<h2><span class="section-number">13.11. </span>Controlling / Directing the compiler<a class="headerlink" href="#controlling-directing-the-compiler" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.11. </span>Controlling / Directing the compiler<a class="headerlink" href="#controlling-directing-the-compiler" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="options">
-<h3><span class="section-number">13.11.1. </span>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">25.11.1. </span>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="optimization-options">
-<h4><span class="section-number">13.11.1.1. </span>Optimization options<a class="headerlink" href="#optimization-options" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">25.11.1.1. </span>Optimization options<a class="headerlink" href="#optimization-options" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="language-options">
-<h4><span class="section-number">13.11.1.2. </span>Language options<a class="headerlink" href="#language-options" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">25.11.1.2. </span>Language options<a class="headerlink" href="#language-options" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="debugger-options">
-<h4><span class="section-number">13.11.1.3. </span>Debugger options<a class="headerlink" href="#debugger-options" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">25.11.1.3. </span>Debugger options<a class="headerlink" href="#debugger-options" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="machine-specific-options">
-<h4><span class="section-number">13.11.1.4. </span>Machine Specific options<a class="headerlink" href="#machine-specific-options" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">25.11.1.4. </span>Machine Specific options<a class="headerlink" href="#machine-specific-options" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
 <div class="section" id="our-focus">
-<h3><span class="section-number">13.11.2. </span>Our focus<a class="headerlink" href="#our-focus" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">25.11.2. </span>Our focus<a class="headerlink" href="#our-focus" title="Permalink to this headline">¶</a></h3>
 <p>We will use a set of options that let us focus on understanding the core ability of the compiler to generate assembly code for us.  Specifically we will be focusing on how it translates “C” syntax into assembly code.  We will use a set of options that make it easier to see this relationship by having the compiler avoid adding extra assembly syntax needed for the debugging, or to improve the security of the code it generates.</p>
 </div>
 </div>
@@ -726,7 +676,7 @@ the general structure of our program should be the same.  After all, all of thes
 
 
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"515b89fa135f48989c4daa78d978b3d0": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_6626b77ef60a473c945229ecffda995b", "msg_id": "", "outputs": [{"name": "stdout", "output_type": "stream", "text": "$ ls -lh $(type -p python3.9)\n-rwxrwxr-x. 1 nayvoj users 24M Feb  6 13:30 \u001b[0m\u001b[01;32m/opt/conda/bin/python3.9\u001b[0m\r\n$ \n"}]}}, "6626b77ef60a473c945229ecffda995b": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "6fc68496c767474a956bc4f67f63576c": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_e603a6b68d214bef9b3aad14fedc92ab", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ objdump -M intel -d $(type -p python3.9) | head -20\r\n/opt/conda/bin/python3.9:     file format elf64-x86-64\r\n\r\n\r\nDisassembly of section .init:\r\n\r\n000000000005c000 <_init>:\r\n   5c000:\t48 83 ec 08          \tsub    rsp,0x8\r\n   5c004:\te8 4b ea 1a 00       \tcall   20aa54 <call_gmon_start>\r\n   5c009:\t48 83 c4 08          \tadd    rsp,0x8\r\n   5c00d:\tc3                   \tret    \r\n\r\nDisassembly of section .plt:\r\n\r\n000000000005c010 <__libc_start_main@plt-0x10>:\r\n   5c010:\tff 35 92 84 33 00    \tpush   QWORD PTR [rip+0x338492]        # 3944a8 <_GLOBAL_OFFSET_TABLE_+0x8>\r\n   5c016:\tff 25 94 84 33 00    \tjmp    QWORD PTR [rip+0x338494]        # 3944b0 <_GLOBAL_OFFSET_TABLE_+0x10>\r\n   5c01c:\t0f 1f 40 00          \tnop    DWORD PTR [rax+0x0]\r\n\r\n000000000005c020 <__libc_start_main@plt>:\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "78374f4fb5e44b3dab3a3b4bf77d85cd": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_d775249d6c2448e085530584e7a79579", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ type -p python/opt/conda/bin/python\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "863bf08a29f548628895b3ef84f9e737": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_d580770a9c71424bb1a4b01d20819632", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ echo -e 'set disassembly-flavor intel\nb _start\nrun\ndisass\nquit' | gdb $(type -p python)GNU gdb (GDB) 10.2\r\nCopyright (C) 2021 Free Software Foundation, Inc.\r\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\r\nThis is free software: you are free to change and redistribute it.\r\nThere is NO WARRANTY, to the extent permitted by law.\r\nType \"show copying\" and \"show warranty\" for details.\r\nThis GDB was configured as \"x86_64-pc-linux-gnu\".\r\nType \"show configuration\" for configuration details.\r\nFor bug reporting instructions, please see:\r\n<https://www.gnu.org/software/gdb/bugs/>.\r\nFind the GDB manual and other documentation resources online at:\r\n    <http://www.gnu.org/software/gdb/documentation/>.\r\n\r\nFor help, type \"help\".\r\nType \"apropos word\" to search for commands related to \"word\"...\r\nReading symbols from /opt/conda/bin/python...\r\n(gdb) (gdb) Breakpoint 1 at 0x20aa28\r\n(gdb) Starting program: /opt/conda/bin/python \r\n[Thread debugging using libthread_db enabled]\r\nUsing host libthread_db library \"/lib/x86_64-linux-gnu/libthread_db.so.1\".\r\n\r\nBreakpoint 1, 0x000055d39d8faa28 in _start ()\r\n(gdb) Dump of assembler code for function _start:\r\n=> 0x000055d39d8faa28 <+0>:\txor    ebp,ebp\r\n   0x000055d39d8faa2a <+2>:\tmov    r9,rdx\r\n   0x000055d39d8faa2d <+5>:\tpop    rsi\r\n   0x000055d39d8faa2e <+6>:\tmov    rdx,rsp\r\n   0x000055d39d8faa31 <+9>:\tand    rsp,0xfffffffffffffff0\r\n   0x000055d39d8faa35 <+13>:\tpush   rax\r\n   0x000055d39d8faa36 <+14>:\tpush   rsp\r\n   0x000055d39d8faa37 <+15>:\tlea    r8,[rip+0x91392]        # 0x55d39d98bdd0 <__libc_csu_fini>\r\n   0x000055d39d8faa3e <+22>:\tlea    rcx,[rip+0x9139b]        # 0x55d39d98bde0 <__libc_csu_init>\r\n   0x000055d39d8faa45 <+29>:\tlea    rdi,[rip+0xfffffffffff136d4]        # 0x55d39d80e120 <main>\r\n   0x000055d39d8faa4c <+36>:\tcall   0x55d39d74c020 <__libc_start_main@plt>\r\n   0x000055d39d8faa51 <+41>:\thlt    \r\n   0x000055d39d8faa52 <+42>:\tnop\r\n   0x000055d39d8faa53 <+43>:\tnop\r\nEnd of assembler dump.\r\n(gdb) A debugging session is active.\r\n\r\n\tInferior 1 [process 353] will be killed.\r\n\r\nQuit anyway? (y or n) [answered Y; input not from terminal]\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "898fceae7e8446b99856ad2b60f72ec3": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "96d223a09f52460aaa3639d1829a856a": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9b35c35a20424d2d8ca8dbcba2e8b755": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a684575a843e4c1b8d201f1051fccff5": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_9b35c35a20424d2d8ca8dbcba2e8b755", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ file $(type -p python3.9)/opt/conda/bin/python3.9: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.18, with debug_info, not stripped\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "d2fda8980855453ab798308b704e6659": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_96d223a09f52460aaa3639d1829a856a", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ ls -l $(type -p python3.9)-rwxrwxr-x. 1 nayvoj users 24543952 Feb  6 13:30 /opt/conda/bin/python3.9\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "d580770a9c71424bb1a4b01d20819632": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d775249d6c2448e085530584e7a79579": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d90cf50e8dee48a2bf680101343bd7e4": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_898fceae7e8446b99856ad2b60f72ec3", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ ls -l $(type -p python)lrwxrwxrwx. 1 nayvoj users 9 Feb  6 13:30 /opt/conda/bin/python -> python3.9\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "e603a6b68d214bef9b3aad14fedc92ab": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}}, "version_major": 2, "version_minor": 0}
+{"state": {"068673170ecc4170b917d12a820bd45d": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "100%", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": "scroll", "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "218dd7d48ffb4f37b76d576b6ea506bb": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_6bb6f1cc176741789f9a6b12a92ddd6e", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ ls -l $(type -p python3.9)-rwxrwxr-x 1 jovyan users 24598616 Jul 26  2021 \u001b[0m\u001b[01;32m/opt/conda/bin/python3.9\u001b[0m\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "2851dc886a10480ab782b38cfb238109": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "100%", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": "scroll", "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "482f33fb0e9d4ce6872a62be329ba425": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_2851dc886a10480ab782b38cfb238109", "msg_id": "", "outputs": [{"name": "stdout", "output_type": "stream", "text": "$ ls -lh $(type -p python3.9)\n-rwxrwxr-x 1 jovyan users 24M Jul 26  2021 \u001b[0m\u001b[01;32m/opt/conda/bin/python3.9\u001b[0m\r\n$ "}]}}, "53cdcf4b5dbe4d05b78ad4ae78851d6b": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "100%", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": "scroll", "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "6bb6f1cc176741789f9a6b12a92ddd6e": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "100%", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": "scroll", "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "71a8923efaca4824a3923527783e1662": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_8bfca2ebbe2248e9b635176717f25022", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ type -p python/opt/conda/bin/python\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "738c88c1e8a64ba8955a2ab01796e22d": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_53cdcf4b5dbe4d05b78ad4ae78851d6b", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ echo -e 'set disassembly-flavor intel\nb _start\nrun\ndisass\nquit' | gdb $(type -p python)\u001b[35;1m\u001b[35;1mGNU gdb \u001b[m\u001b[35;1m(GDB) \u001b[m\u001b[35;1m10.2\u001b[m\u001b[35;1m\r\n\u001b[m\u001b[mCopyright (C) 2021 Free Software Foundation, Inc.\r\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\r\nThis is free software: you are free to change and redistribute it.\r\nThere is NO WARRANTY, to the extent permitted by law.\r\nType \"show copying\" and \"show warranty\" for details.\r\nThis GDB was configured as \"x86_64-pc-linux-gnu\".\r\nType \"show configuration\" for configuration details.\r\nFor bug reporting instructions, please see:\r\n<https://www.gnu.org/software/gdb/bugs/>.\r\nFind the GDB manual and other documentation resources online at:\r\n    <http://www.gnu.org/software/gdb/documentation/>.\r\n\r\nFor help, type \"help\".\r\nType \"apropos word\" to search for commands related to \"word\"...\r\nReading symbols from \u001b[32m/opt/conda/bin/python\u001b[m...\r\n(gdb) (gdb) Breakpoint 1 at \u001b[34m0x20c688\u001b[m\r\n(gdb) Starting program: /opt/conda/bin/python \r\n[Thread debugging using libthread_db enabled]\r\nUsing host libthread_db library \"\u001b[32m/lib/x86_64-linux-gnu/libthread_db.so.1\u001b[m\".\r\n\r\nBreakpoint 1, \u001b[34m0x000055f3c22ca688\u001b[m in \u001b[33m_start\u001b[m ()\r\n(gdb) Dump of assembler code for function _start:\r\n=> \u001b[34m0x000055f3c22ca688\u001b[m <+0>:\txor    ebp,ebp\r\n   \u001b[34m0x000055f3c22ca68a\u001b[m <+2>:\tmov    r9,rdx\r\n   \u001b[34m0x000055f3c22ca68d\u001b[m <+5>:\tpop    rsi\r\n   \u001b[34m0x000055f3c22ca68e\u001b[m <+6>:\tmov    rdx,rsp\r\n   \u001b[34m0x000055f3c22ca691\u001b[m <+9>:\tand    rsp,0xfffffffffffffff0\r\n   \u001b[34m0x000055f3c22ca695\u001b[m <+13>:\tpush   rax\r\n   \u001b[34m0x000055f3c22ca696\u001b[m <+14>:\tpush   rsp\r\n   \u001b[34m0x000055f3c22ca697\u001b[m <+15>:\tlea    r8,[rip+0x90462]        # \u001b[34m0x55f3c235ab00\u001b[m <\u001b[33m__libc_csu_fini\u001b[m>\r\n   \u001b[34m0x000055f3c22ca69e\u001b[m <+22>:\tlea    rcx,[rip+0x9046b]        # \u001b[34m0x55f3c235ab10\u001b[m <\u001b[33m__libc_csu_init\u001b[m>\r\n   \u001b[34m0x000055f3c22ca6a5\u001b[m <+29>:\tlea    rdi,[rip+0xfffffffffff12374]        # \u001b[34m0x55f3c21dca20\u001b[m <\u001b[33mmain\u001b[m>\r\n   \u001b[34m0x000055f3c22ca6ac\u001b[m <+36>:\tcall   \u001b[34m0x55f3c211a030\u001b[m <\u001b[33m__libc_start_main@plt\u001b[m>\r\n   \u001b[34m0x000055f3c22ca6b1\u001b[m <+41>:\thlt    \r\n   \u001b[34m0x000055f3c22ca6b2\u001b[m <+42>:\tnop\r\n   \u001b[34m0x000055f3c22ca6b3\u001b[m <+43>:\tnop\r\nEnd of assembler dump.\r\n(gdb) A debugging session is active.\r\n\r\n\tInferior 1 [process 1175] will be killed.\r\n\r\nQuit anyway? (y or n) [answered Y; input not from terminal]\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "89ef1bdcc4214484992d1b2942af621e": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_d60f98ffb7194e1a87b026b415e12113", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ objdump -M intel -d $(type -p python3.9) | head -20\r\n/opt/conda/bin/python3.9:     file format elf64-x86-64\r\n\r\n\r\nDisassembly of section .init:\r\n\r\n000000000005c000 <_init>:\r\n   5c000:\t48 83 ec 08          \tsub    rsp,0x8\r\n   5c004:\te8 ab 06 1b 00       \tcall   20c6b4 <call_gmon_start>\r\n   5c009:\te8 87 07 1b 00       \tcall   20c795 <frame_dummy>\r\n   5c00e:\te8 86 0b 24 00       \tcall   29cb99 <__do_global_ctors_aux>\r\n   5c013:\t48 83 c4 08          \tadd    rsp,0x8\r\n   5c017:\tc3                   \tret    \r\n\r\nDisassembly of section .plt:\r\n\r\n000000000005c020 <__libc_start_main@plt-0x10>:\r\n   5c020:\tff 35 82 94 33 00    \tpush   QWORD PTR [rip+0x339482]        # 3954a8 <_GLOBAL_OFFSET_TABLE_+0x8>\r\n   5c026:\tff 25 84 94 33 00    \tjmp    QWORD PTR [rip+0x339484]        # 3954b0 <_GLOBAL_OFFSET_TABLE_+0x10>\r\n   5c02c:\t0f 1f 40 00          \tnop    DWORD PTR [rax+0x0]\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "8bfca2ebbe2248e9b635176717f25022": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "100%", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": "scroll", "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b0ad72dc6a0d4a989726aa12532e11f8": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_bf171758b4074f15a5bcc15651e2990a", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ ls -l $(type -p python)lrwxrwxrwx 1 jovyan users 9 Jul 26  2021 \u001b[0m\u001b[01;36m/opt/conda/bin/python\u001b[0m -> \u001b[01;32mpython3.9\u001b[0m\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "bf171758b4074f15a5bcc15651e2990a": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "100%", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": "scroll", "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "ce8a40541e6548d88e166effa875b2cf": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_068673170ecc4170b917d12a820bd45d", "msg_id": "", "outputs": [{"data": {"text/markdown": "<pre style=\"border: solid #cccccc 2px; background-color: black; font-family: monospace, monospace; font-size: inherit; color: white\">\n$ file $(type -p python3.9)/opt/conda/bin/python3.9: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.18, with debug_info, not stripped\r\n</pre>", "text/plain": "<IPython.core.display.Markdown object>"}, "metadata": {}, "output_type": "display_data"}]}}, "d60f98ffb7194e1a87b026b415e12113": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "100%", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": "scroll", "padding": null, "right": null, "top": null, "visibility": null, "width": null}}}, "version_major": 2, "version_minor": 0}
 </script>
 
 
@@ -752,35 +702,37 @@ the general structure of our program should be the same.  After all, all of thes
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
+        
+            <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../assembly/InfoRepI.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../assembly/assemblyOS.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">12. </span>Representing information - The Basics: Bits, Bytes and Notation</p>
+            <p class="prev-next-title"><span class="section-number">24. </span>Assembly using the OS</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../BUCS210_intro.html" title="next page">
+    <a class='right-next' id="next-link" href="mychapter.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">BU CS210 Overview</p>
+        <p class="prev-next-title"><span class="section-number">26. </span>New Chapter</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+        
         </div>
     </div>
     <footer class="footer">
-  <p>
-    
-      By Jonathan Appavoo<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <div class="container">
+      <p>
+        
+          By Jonathan Appavoo<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 
